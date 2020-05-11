@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学习无忧</title>
+    <script src="../tools/js/jquery.min.js"></script>
+    <script src="../tools/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../tools/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../tools/css/index.css">
+    <style>
+        #up,
+        #down,
+        #left,
+        #right,
+        #newStart {
+            display: inline-block;
+        }
+
+        .btnbig {
+            width: 65px;
+            height: 65px;
+        }
+
+        #left {
+            margin-right: 20px;
+        }
+
+        #right {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  主 -->
+    <div id="parent">
+        <!-- 导航条 顶 -->
+        <div class="bs-docs-header ">
+            <img class="" src="../img/nav1.jpg" alt="" class="img-responsive">
+            <div class="row container" id="d1">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <a href="../index.html" class="btn btn-primary btn-lg active" role="button">
+                        <i class="glyphicon glyphicon-home"></i>
+                        首页</a>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <a href="https://www.runoob.com/" class="btn btn-primary btn-lg active" role="button"
+                        target="_blank">
+                        <i class="glyphicon glyphicon-education"></i>
+                        学习文档</a>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <a href="https://www.csdn.net/" class="btn btn-primary btn-lg active" role="button" target="_blank">
+                        <i class="glyphicon glyphicon-send"></i>
+                        技术交流</a>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <a href="https://www.nowcoder.com/ta/coding-interviews" class="btn btn-primary btn-lg active"
+                        role="button" target="_blank">
+                        <i class="glyphicon glyphicon-book"></i>
+                        刷题宝典</a>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <a href="https://github.com/" class="btn btn-primary btn-lg active" role="button" target="_blank">
+                        <i class="glyphicon glyphicon-wrench"></i>
+                        工具管理</a>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <a href="http://www.tmooc.cn/" class="btn btn-primary btn-lg active" role="button" target="_blank">
+                        <i class="glyphicon glyphicon-heart"></i>
+                        培训机构</a>
+                </div>
+            </div>
+        </div>
+
+        <br> <br> <br>
+
+
+        <!-- 第二部分-->
+        <div class="container-fluid row" id="d2">
+
+            <!--  logo + 搜索 -->
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" id="d21">
+                <img src="../img/logo2.jpg" alt="" class="img-rounded img-responsive" id="wuyou">
+                <br> <br>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control " placeholder="Search for..." id="val1" value="">
+                        <span class="input-group-btn">
+                            <a href="https://www.baidu.com/s?wd=" id="a1" target="_blank">
+                                <button class="btn btn-default btn1" type="button" id="btn1">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!--   show  -->
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " id="img0">
+                <img src="../show_img/show1.jpg" alt="" class="img-rounded img-responsive" id="img1">
+            </div>
+
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+        </div>
+
+        <!-- 第三部分 -->
+        <div class="container-fluid row" id="d3">
+            <!-- 扩展左  友情链接 -->
+            <div class=" col-md-2 col-lg-2 hidden-sm hidden-xs">
+                <table class="table  table-bordered table-hover table-responsive">
+                    <tr class="info">
+                        <td><a href="../index.html" class="btn btn-success btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-bookmark"></i>
+                                友情链接</a></td>
+                    </tr>
+                    <tr class="warning">
+                        <td><a href="https://www.python.org/" target="_blank" class="btn btn-info btn-lg active"
+                                role="button">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Python</a></td>
+                    </tr>
+                    <tr class="danger">
+                        <td><a href="https://www.jetbrains.com/pycharm/" target="_blank"
+                                class="btn btn-info btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-link"></i>
+                                PyCharm</a></td>
+                    </tr>
+                    <tr class="active">
+                        <td><a href="https://code.visualstudio.com/" target="_blank" class="btn btn-info btn-lg active"
+                                role="button">
+                                <i class="glyphicon glyphicon-link"></i>
+                                VSCode</a></td>
+                    </tr>
+                    <tr class="info">
+                        <td><a href="https://www.bootcss.com/" target="_blank" class="btn btn-info btn-lg active"
+                                role="button">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Bootstrap</a></td>
+                    </tr>
+                    <tr class="warning">
+                        <td><a href="https://www.adobe.com/cn/index.html" target="_blank"
+                                class="btn btn-info btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Adobe</a></td>
+                    </tr>
+                    <tr class="danger">
+                        <td><a href="https://glyphicons.com/" target="_blank" class="btn btn-info btn-lg active"
+                                role="button">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Glyphicons</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 2048游戏 -->
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <h1>在线2048</h1>
+
+                <!-- 游戏界面与按钮分开 -->
+                <div class="container-fluid row">
+
+                    <!-- 2048游戏界面展示 -->
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <table class="table  table-bordered  table-responsive" id="tableView">
+                            <tr class="info">
+                                <td colspan="8" style="text-align: right;">
+                                    <h1>得分：</h1>
+                                </td>
+                            </tr>
+                            <!-- 第一行 -->
+                            <tr>
+                                <td class="warning" colspan="2">
+                                    <h1 id="i1">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="i2">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="i3">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="i4">0</h1>
+                                </td>
+                            </tr>
+                            <!-- 第二行 -->
+                            <tr>
+                                <td class="warning" colspan="2">
+                                    <h1 id="j1">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="j2">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="j3">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="j4">0</h1>
+                                </td>
+                            </tr>
+                            <!-- 第三行 -->
+                            <tr>
+                                <td class="warning" colspan="2">
+                                    <h1 id="k1">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="k2">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="k3">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="k4">0</h1>
+                                </td>
+                            </tr>
+                            <!-- 第四行 -->
+                            <tr>
+                                <td class="warning" colspan="2">
+                                    <h1 id="v1">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="v2">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="v3">0</h1>
+                                </td>
+                                <td class="warning" colspan="2">
+                                    <h1 id="v4">0</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- 游戏按钮功能 -->
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <table class="table  table-bordered  table-responsive">
+                            <!-- 分数 -->
+                            <tr class="info">
+                                <td class="active" colspan="5" style="text-align: center;color: red;">
+                                    <h1 id="df">0</h1>
+                                </td>
+                            </tr>
+                            <!-- 第一行 -->
+                            <tr>
+                                <td class="warning" colspan="5">
+                                    <div id="up">
+                                        <button class="btn btn-warning btnbig">
+                                            <i class="glyphicon glyphicon-arrow-up"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 第二行 -->
+                            <tr>
+                                <td class="warning" colspan="5" id="my2048">
+                                    <div id="left">
+                                        <button class="btn btn-warning btnbig">
+                                            <i class="glyphicon glyphicon-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                    <div id="right">
+                                        <button class="btn btn-warning btnbig">
+                                            <i class="glyphicon glyphicon-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 第三行 -->
+                            <tr>
+                                <td class="warning" colspan="5">
+                                    <div id="down">
+                                        <button class="btn btn-warning btnbig">
+                                            <i class="glyphicon glyphicon-arrow-down"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 第四行 -->
+                            <tr>
+                                <td class="warning" colspan="5">
+                                    <div id="newStart">
+                                        <button class="btn btn-info btn-lg active btnbig">
+                                            <i class="glyphicon glyphicon-repeat"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 游戏规则 -->
+                <h1>游戏规则：</h1>
+                <table class="table  table-bordered table-hover table-responsive" style="text-align: left;">
+                    <tr class="active">
+                        <td colspan="3">
+                            <p id="span1">
+                                2048游戏共有16个格子，初始时初始数字由2或者4构成。
+                            </p>
+                            <p id="span1">
+                                1、点击图标向一个方向滑动，所有格子会向那个方向运动。
+                            </p>
+                            <p id="span1">
+                                2、相同数字的两个格子，相撞知时数字会相加。
+                            </p>
+                            <p id="span1">
+                                3、每次滑动时，空白处会随机刷新出一个数字的格子
+                            </p>
+                            <p id="span1">
+                                4、当界面不可运动时（当界面全部被数字填满时），游戏道结束；当界面中最大数字是2048时，游戏胜利。
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <!-- 扩展右 -->
+            <div class=" col-md-2 col-lg-2 col-sm-2 col-xs-2">
+                <table class="table  table-bordered table-hover table-responsive">
+                    <tr class="info">
+                        <td><a href="../index.html" class="btn btn-success btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-headphones"></i>
+                                功能扩展</a></td>
+                    </tr>
+                    <tr class="warning">
+                        <td><a href="./2048.html" class="btn btn-info btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-hand-right"></i>
+                                在线2048</a></td>
+                    </tr>
+                    <tr class="danger">
+                        <td><a href="../index.html" class="btn btn-info btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-remove"></i>
+                                还没想好</a></td>
+                    </tr>
+                    <tr class="active">
+                        <td><a href="../index.html" class="btn btn-info btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-remove"></i>
+                                还没想好</a></td>
+                    </tr>
+                    <tr class="info">
+                        <td><a href="../index.html" class="btn btn-info btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-remove"></i>
+                                还没想好</a></td>
+                    </tr>
+                    <tr class="warning">
+                        <td><a href="../index.html" class="btn btn-info btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-remove"></i>
+                                还没想好</a></td>
+                    </tr>
+                    <tr class="danger">
+                        <td><a href="../index.html" class="btn btn-info btn-lg active" role="button">
+                                <i class="glyphicon glyphicon-remove"></i>
+                                还没想好</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 置顶 -->
+        <div class="container-fluid">
+            <a href="#">
+                <img class="" src="../img/返回顶部-035.png" alt="..." id="dz">
+            </a>
+        </div>
+
+        <!-- 最底部 -->
+        <div class="bs-docs-header " id="zd">
+            <img src="../img/z.png" alt="" class="img-responsive">
+        </div>
+    </div> <!--  主 结束 -->
+
+    <script>
+        // 搜索链接
+        $(function () {
+            $('#btn1').click(function () {
+                $('#a1').prop('href', 'https://www.baidu.com/s?wd=' + $('#val1').val())
+            })
+            // 自动换展示图
+            setInterval(function () {
+                var num = Math.floor(Math.random() * 12 + 1)
+                $('#img1').prop('src', '../show_img/show' + num + '.jpg')
+            }, 4000)
+        })
+    </script>
+
+    <!-- 2048逻辑处理 -->
+    <script>
+        // 创建对象绑定变量
+        var df = $('#df').text()
+        var i1 = $('#i1'), i2 = $('#i2'), i3 = $('#i3'), i4 = $('#i4')
+        var j1 = $('#j1'), j2 = $('#j2'), j3 = $('#j3'), j4 = $('#j4')
+        var k1 = $('#k1'), k2 = $('#k2'), k3 = $('#k3'), k4 = $('#k4')
+        var v1 = $('#v1'), v2 = $('#v2'), v3 = $('#v3'), v4 = $('#v4')
+        // var reset_list = [
+        //     [[i1, 0], [i2, 0], [i3, 2], [i4, 0]],
+        //     [[j1, 0], [j2, 0], [j3, 0], [j4, 0]],
+        //     [[k1, 2], [k2, 0], [k3, 0], [k4, 0]],
+        //     [[v1, 0], [v2, 0], [v3, 0], [v4, 0]]
+        // ]
+        var list = [
+            [[i1, 0], [i2, 0], [i3, 0], [i4, 0]],
+            [[j1, 0], [j2, 2], [j3, 0], [j4, 0]],
+            [[k1, 0], [k2, 0], [k3, 0], [k4, 0]],
+            [[v1, 0], [v2, 0], [v3, 0], [v4, 2]]
+        ]
+        // 创建2个随机函数，一个用来确定2或4的值(人为提高生成2的概率)，一个用来确定0处生成新数字
+        function num1() {
+            var num = Math.floor(Math.random() * 4 + 1)
+            return num > 1 ? 2 : 4
+        }
+        function num2(num) {
+            return num == 0 ? -1 : Math.floor(Math.random() * num)
+        }
+
+        //为界面随机生成新数字，修改数组对应值
+        function new_num() {
+            var num = num1()
+            var s = 0
+            var arr = new Array()
+            for (var i = 0; i < list.length; i++) {
+                for (var j = 0; j < list[i].length; j++) {
+                    if (list[i][j][1] > 0) {
+                        continue
+                    } else {
+                        arr[s] = list[i][j][0]
+                        s++
+                    }
+                }
+            }
+            var res = num2(s)
+            if (res >= 0) {
+                for (var k = 0; k < list.length; k++) {
+                    for (var j = 0; j < list[k].length; j++) {
+                        if (list[k][j][0] == arr[res]) {
+                            list[k][j][1] = num
+                            console.log(list[k][j][0], list[k][j][1])
+                            return
+                        }
+                    }
+                }
+            } else {
+                alert('游戏结束，得分:' + df)
+                reset_all()
+            }
+        }
+
+        //数字向左移动，并合并相同数字,并计分
+        function go_left() {
+            for (var i = 0; i < list.length; i++) {
+                for (var j = 0; j < list[i].length; j++) {
+                    if (list[i][j][1] > 0) {
+                        while (true) {
+                            if (j == 0) {
+                                break
+                            } else if (list[i][j - 1][1] != 0) {
+                                if (list[i][j][1] == list[i][j - 1][1]) {
+                                    var num_df = Number(df)
+                                    df = num_df + Number(list[i][j][1])
+                                    $('#df').text(df)
+                                    list[i][j - 1][1] *= 2
+                                    list[i][j][1] = 0
+                                    j--
+                                } else {
+                                    break
+                                }
+                            } else {
+                                var data = list[i][j - 1][1]
+                                list[i][j - 1][1] = list[i][j][1]
+                                list[i][j][1] = data
+                                j--
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //将list数组每个元素数组的每个元素1 4 交换，2 3 交换
+        function change_list() {
+            for (var i = 0; i < list.length; i++) {
+                var data = list[i][0][1]
+                list[i][0][1] = list[i][3][1]
+                list[i][3][1] = data
+                var msg = list[i][1][1]
+                list[i][1][1] = list[i][2][1]
+                list[i][2][1] = msg
+            }
+        }
+
+        //数字向右移动，并合并相同数字
+        function go_right() {
+            change_list()
+            go_left()
+            change_list()
+        }
+
+        //矩阵转置，对角交换
+        function big_change() {
+            var b = 0
+            for (var i = 3; i > 0; i--) {
+                for (var j = 0; j < i; j++) {
+                    var dn = list[b][b + j + 1][1]
+                    list[b][b + j + 1][1] = list[b + j + 1][b][1]
+                    list[b + j + 1][b][1] = dn
+                }
+                b += 1
+            }
+        }
+
+        //数字向上移动，并且合并相同数字
+        function go_up() {
+            big_change()
+            go_left()
+            big_change()
+        }
+
+        //数字向下移动，并合并相同数字
+        function go_down() {
+            big_change()
+            go_right()
+            big_change()
+        }
+
+        //数据展示
+        function show_list() {
+            for (var i = 0; i < list.length; i++) {
+                for (var j = 0; j < list[i].length; j++) {
+                    list[i][j][0].text(list[i][j][1])
+                }
+            }
+        }
+
+        //重置页面与数组数据
+        function reset_all() {
+            // list = reset_list
+            for (var i = 0; i < list.length; i++) {
+                for (var j = 0; j < list[i].length; j++) {
+                    list[i][j][1] = 0
+                }
+            }
+            var nu1 = Math.floor(Math.random() * 2)
+            var nu2 = Math.floor(Math.random() * 2 + 2)
+            list[nu1][nu2][1] = 2
+            list[nu2][nu1][1] = 2
+            list[nu1][nu1][1] = 2
+            $('#df').text('0')
+            df = 0
+            show_list()
+
+        }
+
+        //为按钮绑定点击事件
+        //按钮上
+        $('#up').click(function () {
+            go_up()
+            new_num()
+            show_list()
+        })
+        //按钮下
+        $('#down').click(function () {
+            go_down()
+            new_num()
+            show_list()
+        })
+        //按钮左
+        $('#left').click(function () {
+            go_left()
+            new_num()
+            show_list()
+        })
+        //按钮右
+        $('#right').click(function () {
+            go_right()
+            new_num()
+            show_list()
+        })
+        //按钮从新开始
+        $('#newStart').click(reset_all)
+
+
+        reset_all()
+
+
+    </script>
+
+</body>
+
+</html>
